@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- Année Dynamique (Force 2026 si besoin, ou auto) ---
+    // --- Année Dynamique (2026) ---
     const yearSpans = document.querySelectorAll('.current-year');
     const currentYear = new Date().getFullYear();
     yearSpans.forEach(span => span.textContent = currentYear > 2025 ? currentYear : 2026);
@@ -26,8 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileToggle.innerHTML = isOpen 
                 ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
                 : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
-            
-            // Empêche le scroll quand le menu est ouvert
             body.style.overflow = isOpen ? 'hidden' : '';
         });
     }
@@ -35,14 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Mode Sombre (Dark Mode) ---
     const themeToggle = document.querySelector('.theme-toggle');
     const html = document.documentElement;
-    
-    // Check system preference
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const savedTheme = localStorage.getItem('theme');
     
     if (savedTheme) {
         html.setAttribute('data-theme', savedTheme);
-    } else if (systemPrefersDark) {
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         html.setAttribute('data-theme', 'dark');
     }
 
@@ -74,4 +69,27 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.transition = "all 0.8s cubic-bezier(0.5, 0, 0, 1)";
         revealObserver.observe(el);
     });
+
+    // --- Gestion de la Modale d'Alerte (Nouveau) ---
+    const alertModal = document.getElementById('technical-alert');
+    const closeAlertBtn = document.getElementById('close-alert');
+
+    if (alertModal && closeAlertBtn) {
+        setTimeout(() => {
+            alertModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }, 1000);
+
+        closeAlertBtn.addEventListener('click', () => {
+            alertModal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        alertModal.addEventListener('click', (e) => {
+            if (e.target === alertModal) {
+                alertModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
 });

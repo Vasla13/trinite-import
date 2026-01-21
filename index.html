@@ -20,28 +20,33 @@
                     <li><a href="auto.html" class="nav-link">Pôle Auto</a></li>
                     <li><a href="spiritueux.html" class="nav-link">Spiritueux</a></li>
                     <li><a href="process.html" class="nav-link">Process</a></li>
-                    <li><a href="about.html" class="nav-link">À Propos</a></li> <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="about.html" class="nav-link">À Propos</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
             <div class="flex" style="gap:1rem; align-items:center;">
-                <button class="theme-toggle" aria-label="Mode sombre">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-                </button>
-                <button class="mobile-toggle" aria-label="Menu">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-                </button>
+                <button class="theme-toggle" aria-label="Mode sombre"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
+                <button class="mobile-toggle" aria-label="Menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
             </div>
         </div>
     </header>
 
     <section class="hero text-center">
+        <div class="hero-video-wrapper">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="assets/pub.mp4" type="video/quicktime">
+                <source src="assets/pub.mp4" type="video/mp4"> Votre navigateur ne supporte pas la vidéo.
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+
         <div class="container reveal">
-            <span class="badge">Martinique - Europe - Monde</span>
-            <h1 class="mb-2">Le pont de confiance entre<br><span class="text-gradient">Vous et l'Excellence.</span></h1>
-            <p class="lead" style="margin: 0 auto 2.5rem auto;">Logistique premium, distribution maîtrisée. Que ce soit pour votre prochain véhicule ou des spiritueux d'exception, nous importons la qualité jusqu'à La Trinité.</p>
+            <span class="badge" style="background: rgba(255,255,255,0.2); color: white;">Martinique - Europe - Monde</span>
+            <h1 class="mb-2">Le pont de confiance entre<br><span class="text-gradient" style="background: linear-gradient(135deg, #fff 0%, #0ea5e9 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Vous et l'Excellence.</span></h1>
+            <p class="lead" style="margin: 0 auto 2.5rem auto;">Logistique premium, distribution maîtrisée. Que ce soit pour votre future sportive ou des spiritueux d'exception, nous importons la qualité jusqu'à La Trinité.</p>
             <div class="flex" style="justify-content: center; gap: 1rem; flex-wrap: wrap;">
                 <a href="auto.html" class="btn btn-primary">Découvrir Pôle Auto</a>
-                <a href="spiritueux.html" class="btn btn-outline">Cave & Spiritueux</a>
+                <a href="spiritueux.html" class="btn btn-outline-white">Cave & Spiritueux</a>
             </div>
         </div>
     </section>
@@ -53,10 +58,11 @@
                     <div class="card-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 16H9m10 0h3v-3.15a1 1 0 00-.84-.99L16 11l-2.7-3.6a1 1 0 00-.8-.4H5.24a2 2 0 00-1.8 1.1l-.8 1.63A6 6 0 002 12v4.5a2.5 2.5 0 002.5 2.5h.5a2 2 0 002-2V16"/></svg>
                     </div>
-                    <h3>Automobile</h3>
-                    <p>Véhicules neufs et occasions récentes importés de France. Sourcing rigoureux, contrôles certifiés et immatriculation clé en main.</p>
-                    <a href="auto.html" style="color: var(--blue); font-weight: 700; text-decoration: none;">Voir les offres →</a>
+                    <h3>Automobile de Prestige</h3>
+                    <p>Sportives, Supercars et SUV de luxe importés d'Europe. Sourcing élitiste, transport sécurisé et service de conciergerie.</p>
+                    <a href="auto.html" style="color: var(--blue); font-weight: 700; text-decoration: none;">Voir nos gammes →</a>
                 </div>
+                
                 <div class="card reveal" style="transition-delay: 0.1s;">
                     <div class="card-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.5 5.5l7 7M5 20a2 2 0 012-2h10a2 2 0 012 2v2H5v-2zM8 2h8v5H8V2zM7 7h10l2 9H5l2-9z"/></svg>
@@ -115,10 +121,30 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span class="current-year">2026</span> Trinité Import. Tous droits réservés. <br> <small>L'abus d'alcool est dangereux pour la santé.</small></p>
+                <p>&copy; <span class="current-year">2026</span> Trinité Import. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
+
+    <div id="technical-alert" class="modal-overlay">
+        <div class="modal-box">
+            <div class="alert-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+            </div>
+            <h3 style="color: var(--navy); margin-bottom: 1rem;">Information Importante :<br>Incident Technique</h3>
+            <p>Suite à un incident technique indépendant de notre volonté, notre service de réservation en ligne est momentanément indisponible.</p>
+            <div style="background: var(--ice); padding: 1rem; border-radius: 12px; margin: 1.5rem 0;">
+                <p style="margin-bottom: 0.5rem; font-size: 0.9rem;">Pour toute demande urgente :</p>
+                <a href="tel:+596696123456" style="color: var(--blue); font-weight: 700; font-size: 1.2rem; text-decoration: none;">+596 696 12 34 56</a>
+            </div>
+            <button id="close-alert" class="btn btn-primary" style="width: 100%;">Fermer</button>
+        </div>
+    </div>
+
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Import Auto - Trinité Import</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><img src="assets/logo.png" alt="Trinité Import"></a>
+            <nav><ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="auto.html" class="nav-link active">Pôle Auto</a></li>
+                <li><a href="spiritueux.html" class="nav-link">Spiritueux</a></li>
+                <li><a href="process.html" class="nav-link">Process</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul></nav>
+            <div class="flex" style="gap:1rem; align-items:center;">
+                <button class="theme-toggle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
+                <button class="mobile-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 4rem; align-items: center;">
+            <div class="reveal">
+                <span class="badge">IMPORTATION PREMIUM</span>
+                <h1 class="mb-2">Roulez l'esprit tranquille.</h1>
+                <p class="lead">Votre véhicule importé de France ou d'Europe, livré clé en main en Martinique. Zéro démarche administrative pour vous.</p>
+                <ul style="list-style: none; margin-bottom: 2.5rem; color: var(--text-main);">
+                    <li style="margin-bottom: 0.8rem">✅ <strong>Garantie 6 à 12 mois</strong> (Moteur/Boîte/Pont)</li>
+                    <li style="margin-bottom: 0.8rem">✅ <strong>Gestion administrative</strong> (Carte grise, Dédouanement)</li>
+                    <li style="margin-bottom: 0.8rem">✅ <strong>Préparation esthétique</strong> avant remise des clés</li>
+                </ul>
+            </div>
+            <div class="card reveal">
+                <h3 class="mb-2">Recherche Personnalisée</h3>
+                <form>
+                    <div class="form-group">
+                        <label class="form-label">Type de véhicule</label>
+                        <select class="form-select">
+                            <option>Citadine</option>
+                            <option>SUV / 4x4</option>
+                            <option>Berline</option>
+                            <option>Utilitaire</option>
+                            <option>Sport / Premium</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Budget max (€)</label>
+                        <input type="number" class="form-input" placeholder="Ex: 25000">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email de contact</label>
+                        <input type="email" class="form-input" required placeholder="vous@email.com">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Demander un devis gratuit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center mb-2">Nos Services Inclus</h2>
+            <div class="grid card-grid">
+                <div class="card">
+                    <h3>🔍 Sourcing & Inspection</h3>
+                    <p>Nous vérifions l'historique (Histovec), le carnet d'entretien et l'état physique via nos partenaires certifiés en métropole avant tout achat.</p>
+                </div>
+                <div class="card">
+                    <h3>🚢 Logistique Maritime</h3>
+                    <p>Transport sécurisé en conteneur ou navire roulier (Ro-Ro). Nous assurons le véhicule durant toute la traversée jusqu'à Fort-de-France.</p>
+                </div>
+                <div class="card">
+                    <h3>📄 Pack Immatriculation</h3>
+                    <p>Fini la queue à la préfecture. Nous gérons la carte grise définitive, la pose des plaques et le paiement de l'octroi de mer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; <span class="current-year">2026</span> Trinité Import. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

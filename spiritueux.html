@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiritueux & Vins - Trinité Import</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><img src="assets/logo.png" alt="Trinité Import"></a>
+            <nav><ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="auto.html" class="nav-link">Pôle Auto</a></li>
+                <li><a href="spiritueux.html" class="nav-link active">Spiritueux</a></li>
+                <li><a href="process.html" class="nav-link">Process</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul></nav>
+            <div class="flex" style="gap:1rem; align-items:center;">
+                <button class="theme-toggle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
+                <button class="mobile-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero text-center" style="background-image: radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.08) 0%, transparent 60%);">
+        <div class="container reveal">
+            <span class="badge" style="color: var(--warning); background: rgba(245, 158, 11, 0.1);">DISTRIBUTION FINE</span>
+            <h1 class="mb-2">L'excellence en bouteille.</h1>
+            <p class="lead" style="margin: 0 auto 2.5rem auto;">Rhums d'exception, Whiskys Japonais, Gins artisanaux. Nous sourçons les perles rares pour les particuliers et les professionnels (CHR).</p>
+            <a href="#catalogue-request" class="btn btn-primary">Demander le catalogue 2026</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem;">
+            <div class="reveal card">
+                <h2 style="color: var(--navy);">Pour les Particuliers</h2>
+                <p>Accédez à des références introuvables en grande surface. Nos sélections incluent des éditions limitées (HSE, Clément, Nikka, etc.) à prix importateur.</p>
+                <ul style="list-style: none; margin-top: 1rem;">
+                    <li class="mb-2">🥃 <strong>Achat à l'unité</strong> (selon disponibilité)</li>
+                    <li class="mb-2">💡 <strong>Conseils d'expert</strong> pour vos dégustations</li>
+                    <li class="mb-2">📍 <strong>Click & Collect</strong> à La Trinité</li>
+                </ul>
+            </div>
+            <div class="reveal card">
+                <h2 style="color: var(--navy);">Pour les Pros (CHR)</h2>
+                <p>Différenciez votre établissement. Optimisez votre carte des vins et spiritueux avec des produits exclusifs qui marquent les esprits.</p>
+                <ul style="list-style: none; margin-top: 1rem;">
+                    <li class="mb-2">📦 <strong>Commande min. 1 carton</strong> (panachage possible)</li>
+                    <li class="mb-2">🚚 <strong>Livraison offerte</strong> sur toute l'île (sous conditions)</li>
+                    <li class="mb-2">🧾 <strong>Facturation Pro</strong> & TVA récupérable</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="catalogue-request" class="section" style="background: var(--bg-body);">
+        <div class="container" style="max-width: 700px;">
+            <div class="card">
+                <h3 class="text-center mb-2">Recevoir Tarifs & Disponibilités</h3>
+                <form>
+                    <div class="form-group">
+                        <label class="form-label">Vous êtes ?</label>
+                        <select class="form-select">
+                            <option>Particulier</option>
+                            <option>Professionnel (Bar/Resto/Caviste)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-input" required placeholder="contact@domaine.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Message (Recherche spécifique ?)</label>
+                        <textarea class="form-textarea" rows="3" placeholder="Je cherche du Rhum vieux..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Envoyer la demande</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div style="background: #000; color: #fff; padding: 1.5rem; text-align: center; font-size: 0.9rem; font-weight: 600;">
+        L'ABUS D'ALCOOL EST DANGEREUX POUR LA SANTÉ, À CONSOMMER AVEC MODÉRATION.
+    </div>
+
+    <footer class="footer">
+        <div class="container text-center"><p>&copy; <span class="current-year">2026</span> Trinité Import.</p></div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

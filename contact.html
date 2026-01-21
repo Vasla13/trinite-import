@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Trinité Import</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><img src="assets/logo.png" alt="Trinité Import"></a>
+            <nav><ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="auto.html" class="nav-link">Pôle Auto</a></li>
+                <li><a href="spiritueux.html" class="nav-link">Spiritueux</a></li>
+                <li><a href="process.html" class="nav-link">Process</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul></nav>
+            <div class="flex" style="gap:1rem; align-items:center;">
+                <button class="theme-toggle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></button>
+                <button class="mobile-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="section" style="padding-top: 150px;">
+        <div class="container grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem;">
+            <div class="reveal">
+                <span class="badge">PARLONS PROJET</span>
+                <h1>Une question ?</h1>
+                <p class="lead">Un véhicule spécifique, une commande de spiritueux ou une demande de partenariat ? Notre équipe est réactive.</p>
+                
+                <div style="margin-top: 2.5rem;">
+                    <div class="card mb-2" style="padding: 2rem;">
+                        <h3>Nos Coordonnées</h3>
+                        <p><strong>Adresse :</strong><br>ZI de la Petite Cocotte<br>97220 La Trinité, Martinique</p>
+                        <p><strong>Email :</strong><br><a href="mailto:contact@trinite-import.mq" style="color: var(--blue); font-weight: 500;">contact@trinite-import.mq</a></p>
+                        <p><strong>Téléphone / WhatsApp :</strong><br><a href="https://wa.me/596696123456" style="color: var(--success); font-weight: 700; font-size: 1.1rem;">+596 696 12 34 56</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <form>
+                    <div class="form-group">
+                        <label class="form-label">Nom complet</label>
+                        <input type="text" class="form-input" required placeholder="Votre nom">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-input" required placeholder="contact@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Sujet</label>
+                        <select class="form-select">
+                            <option>Demande Info Auto</option>
+                            <option>Commande Spiritueux</option>
+                            <option>Partenariat / B2B</option>
+                            <option>Autre demande</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-textarea" rows="4" required placeholder="Comment pouvons-nous vous aider ?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer"><div class="container text-center"><p>&copy; <span class="current-year">2026</span> Trinité Import.</p></div></footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

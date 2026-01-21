@@ -1,5 +1,5 @@
 /* ========================================
-   TRINITÉ IMPORT - DESIGN SYSTEM 2026 (V2)
+   TRINITÉ IMPORT - DESIGN SYSTEM 2026 (V3 - LOGOS AGRANDIS)
    Fichier: css/style.css
 ======================================== */
 
@@ -35,7 +35,7 @@
     --bg-body: var(--ice);
     --bg-card: var(--white);
     --bg-header: rgba(255, 255, 255, 0.85);
-    --bg-footer: #ffffff; /* Footer clair */
+    --bg-footer: #ffffff;
     --nav-text: var(--text-main);
     
     /* Animations */
@@ -104,14 +104,30 @@ p { margin-bottom: 1.5rem; color: var(--text-muted); font-size: 1.05rem; }
 }
 .header.scrolled { box-shadow: var(--shadow-sm); background: var(--bg-card); }
 
-.nav-container { display: flex; justify-content: space-between; align-items: center; height: 90px; }
+/* MODIFICATION : Container plus flexible pour le grand logo */
+.nav-container { 
+    display: flex; justify-content: space-between; align-items: center; 
+    min-height: 90px; /* Hauteur minimale au lieu de fixe */
+    padding: 1rem 1.5rem; /* Un peu de padding vertical */
+}
 
 .logo { display: flex; align-items: center; text-decoration: none; gap: 0.5rem; }
+
+/* MODIFICATION : Logo beaucoup plus grand et responsive */
 .logo img { 
-    height: 65px; width: auto; 
+    height: 75px; /* Taille mobile de base (plus grand qu'avant) */
+    width: auto; 
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
     transition: transform 0.3s var(--ease-elastic);
 }
+
+/* Sur PC, le logo devient très grand */
+@media (min-width: 961px) {
+    .logo img {
+        height: 95px; 
+    }
+}
+
 .logo:hover img { transform: scale(1.05); }
 
 .nav-menu { display: flex; gap: 2rem; list-style: none; align-items: center; }
@@ -167,9 +183,10 @@ p { margin-bottom: 1.5rem; color: var(--text-muted); font-size: 1.05rem; }
     margin-bottom: 1.5rem; color: var(--blue);
 }
 
-/* HERO MODERN */
+/* HERO MODERN - Ajusté pour le plus grand header */
 .hero {
-    padding-top: 180px; padding-bottom: 100px;
+    padding-top: 200px; /* Augmenté pour compenser le header plus grand */
+    padding-bottom: 100px;
     background: radial-gradient(circle at 15% 20%, rgba(14, 165, 233, 0.08) 0%, transparent 25%),
                 radial-gradient(circle at 85% 60%, rgba(30, 64, 175, 0.08) 0%, transparent 25%);
 }
@@ -188,12 +205,12 @@ p { margin-bottom: 1.5rem; color: var(--text-muted); font-size: 1.05rem; }
     box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1); 
 }
 
-/* FOOTER (REFAIT) */
+/* FOOTER */
 .footer { 
     background: var(--bg-footer); 
     color: var(--text-main); 
     padding: 6rem 0 3rem; 
-    margin-top: auto; /* Push to bottom */
+    margin-top: auto;
     border-top: var(--border-light);
 }
 .footer h4 { color: var(--navy); font-size: 1.1rem; margin-bottom: 1.5rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;}
@@ -201,7 +218,14 @@ p { margin-bottom: 1.5rem; color: var(--text-muted); font-size: 1.05rem; }
 
 .footer p, .footer a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; font-size: 0.95rem; }
 .footer a:hover { color: var(--blue); }
-.footer-logo { height: 50px; width: auto; margin-bottom: 1.5rem; display: block; }
+
+/* MODIFICATION : Logo footer beaucoup plus grand */
+.footer-logo { 
+    height: 85px; /* Nettement plus visible */
+    width: auto; 
+    margin-bottom: 1.5rem; 
+    display: block; 
+}
 
 .footer-bottom { 
     border-top: var(--border-light); 
@@ -215,15 +239,18 @@ p { margin-bottom: 1.5rem; color: var(--text-muted); font-size: 1.05rem; }
 .theme-toggle:hover { background: rgba(0,0,0,0.05); }
 
 @media (max-width: 960px) {
+    /* Ajustement du menu mobile pour qu'il ne soit pas caché par le gros header */
     .nav-menu {
-        position: fixed; top: 90px; left: 0; width: 100%; height: calc(100vh - 90px);
-        background: var(--bg-card); flex-direction: column; padding: 3rem 2rem;
+        position: fixed; top: 0; left: 0; width: 100%; height: 100vh; /* Pleine hauteur */
+        background: var(--bg-card); flex-direction: column; padding: 120px 2rem 3rem 2rem; /* Gros padding top pour éviter le logo */
         transform: translateX(100%); transition: transform 0.4s var(--ease-elastic);
-        justify-content: flex-start; border-top: 1px solid rgba(0,0,0,0.05);
-        align-items: flex-start;
+        justify-content: flex-start; 
+        align-items: center; /* Centré sur mobile */
+        z-index: 999; /* Juste sous le header fixe */
     }
     .nav-menu.open { transform: translateX(0); }
-    .mobile-toggle { display: block; }
+    .mobile-toggle { display: block; z-index: 1001; /* Au dessus du menu ouvert */ }
+    
     h1 { font-size: 3rem; }
     .card-grid { grid-template-columns: 1fr; }
 }
